@@ -2,36 +2,29 @@
 <html>
     <head>
         <style>
-            a {
-                padding-top: 10px;
-                padding-left: 70px;
-                padding-right: 70px;
-                padding-bottom: 10px;
-                text-align: center;
-                text-decoration: none;
-                font-family: verdana;
-                font-size: 15px;
-                border-radius: 11px;
-                background-color: aqua;
-                color: black;
+            .container {
+                width:20rem
             }
-            a:hover {
-                border-top: 2px solid;
-                transition: ease-in-out 0,5s;
-                transform: scale(1);
-            }
-            p {
-                border-color: black;
-                font-family: verdana;
-                border: 10px solid;
-                display: none;
+            img {
+                width: 30%;
+                animation: infinite;
             }
         </style>
     </head>
-        <body>
-            <div style="text-align: center;margin-top: 10rem;">
-            <a href="www.google.com"><b>Tap Here</b></a>
+    <body style="grid-row: auto;">
+        <div style="display: inline;">
+        <div class="container" style="margin: 0; display: inline;"><marquee>
+                  <img src="img/Screenshot 2022-07-11 130050.png">
+                  <img src="img/Screenshot 2022-07-11 125607.png">
+                  <img src="img/Screenshot 2022-07-11 124644.png">
+                </marquee>
             </div>
-            <p>BORDERED ITEM</p>
-        </body>
+                <div class="container" style="margin: auto;"><marquee>
+                    <img src="img/test.png">
+                    <img src="img/Screenshot 2022-07-11 131303.png">
+                    <img src="img/Screenshot 2022-07-11 130621.png">
+                  </marquee>
+                </div>
+        </div>
+      </body>
         </html>
