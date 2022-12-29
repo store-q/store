@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+         a:hover {
+            box-shadow: 0 0px 10px 10px rgba(0, 0, 0, 0.19);
+            transition-duration: 0.5s;
+        }
+        button {
+            padding: 12px 24px;
+            border: 0;
+            border-radius: 4px;
+            color: #ffffff;
+            line-height: 1;
+            text-align: center;
+        }
+        h2 {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            margin: 0px;
+            color: yellow;
+            background-color: dodgerblue;
+            line-height: 5rem;
+            font-size: 3rem;
+            font-family: sans-serif;
+        }
+        table{
+            border-spacing: 0px;
+        }
+    </style>
+</head>
+
+<body style="margin: 0px;">
+    <div style="text-align: center;">
+        <img src="SnaponSmile/7.jpeg" width="100%">
+        <h2>GIGI PUTIH BERSIH DAN RAPI</h2>
+        <table>
+            <tbody>
+                <tr>
+                    <td width="30%">
+                        <div
+                            style="margin-left: 5rem;text-align: left;font-family: sans-serif;font-size: 2rem;color: rgb(65, 173, 14);">
+                            <ul style="list-style-image: url(SnaponSmile/ceklish3.png);">
+                                <li><strong>MEMUTIHKAN GIGI</strong></li>
+                                <p></p>
+                                <li><strong>MERAPIKAN SUSUNAN GIGI</strong></li>
+                            </ul>
+                        </div>
+                    </td>
+                    <td width="70%"><img src="SnaponSmile/snaponsmile4.jpeg" width="100%"></td>
+                </tr>
+            </tbody>
+        </table>
+        <div style="text-align: center;padding-top: 4rem;padding-bottom: 6rem;">
+            <button id="scroll" onclick="scrollBottom()"style="background: #FFA500; font-family: verdana;font-size: 3rem; padding: 12px 90px;">
+                Beli Sekarang
+            </button>
+        </div>
+        <div style="text-align: left;">
+            <h
+                style="text-align:left;padding-right: 2rem; padding-left: 2rem;background: dodgerblue;padding-top: 1.5rem; padding-bottom: 1.5rem;;font-family: sans-serif;font-size: 3rem;color: yellow;">
+                <strong>KEUNGGULAN</strong>
+            </h>
+        </div>
+        <table>
+            <tbody>
+                <tr>
+                    <td width="30%"></td>
+                    <td width="70%"><ul style="list-style-image: url(SnaponSmile/ceklish3.png);">
+                        <div
+                            style="margin-left: 3rem;margin-top: 5rem;margin-right: 1rem;margin-bottom: 5rem; text-align: left;font-family: sans-serif;font-size: 2rem;color: rgb(65, 173, 14);">
+                            <li><strong>TIDAK MENYIMPAN BAU</strong></li>
+                            <p></p>
+                            <li><strong>SELF LUBRICATING</strong></li>
+                            <p></p>
+                            <li><strong>HIDROFOBIK</strong></li>
+                            <p></p>
+                            <li><strong>DAYA TAHAN BAIK</strong></li>
+                            <p></p>
+                            <li><strong>ANTI ALERGI DAN TIDAK BERACUN</strong></li>
+                            <p></p>
+                            <li><strong>KONDUKTIFITAS TERMAL RENDAH</strong></li>
+                        </div>
+                    </ul>
+                </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>SOLUSI UNTUK ANDA</h2>
+        <img src="SnaponSmile/page2.jpeg" width="100%">
+        <h2>CARA PEMAKAIAN</h2>
+        <p></p>
+        <div style="font-size: 1rem;text-align: left;color: rgb(65, 173, 14);font-family: Verdana, Geneva, Tahoma, sans-serif;margin-left: 4rem;margin-top: 2rem;margin-right: 1rem;line-height: 3rem;">
+            <ol>
+                <li style="margin-bottom: 3rem;"><strong>Tempatkan gigi ke dalam secangkir air panas selama 1 menit supaya gigi paslu fleksible.</strong></li>
+                <p></p>
+                <p></p>
+                <li style="margin-bottom: 3rem;"><strong>Dengan menggunakan cermin, posisikan dengan kuat di atas gigi yang ada. Tekan dengan kuat pada gigi Anda dan tepuk lembut bahan kesan dengan ibu jari Anda di belakang gigi asli Anda.</strong></li>
+                <p></p>
+                <p></p>
+                <li style="margin-bottom: 3rem;"><strong>Secara perlahan keluarkan gigi dari mulut Anda setelah 30 detik dan masukkan ke dalam segelas air dingin agar dingin. Bahan impresi berubah menjadi putih saat dikeraskan.</strong></li>
+                <p></p>
+                <p></p>
+              </ol>
+            </div>
+            <h2>HASIL</h2>
+            <img src="SnaponSmile/snaponsmile6.jpeg" width="100%">
+            <div style="text-align:center;padding-top: 3rem;"> <div style="align-content: center; align-items: center; border: 10px double; margin-left: 30px; margin-right: 20px; text-align: center;line-height: 2rem;">
+                <div style=";padding-top: 1.5rem;">
+                <h style="color: red; font-size: 3rem;padding-top: 10px;font-family: sans-serif"><strong>PROMO AKHIR TAHUN</strong></h>
+                </div>
+                 <div>
+                    <p></p>
+                     <p id="demo" style="font-family:Verdana, Geneva, Tahoma, sans-serif; font-size: 4rem;margin-top: 0,5rem;margin-bottom: 0,5rem;"></p>
+                     <script class="body">
+     
+                         // Tetapkan tanggal kita menghitung mundur
+                         var countDownDate = new Date("january 10, 2023 00:00:00").getTime();
+     
+                         // Perbarui hitungan mundur setiap 1 detik
+                         var x = setInterval(function () {
+     
+                             // Dapatkan tanggal dan waktu hari ini
+                             var now = new Date().getTime();
+     
+                             // Temukan jarak antara sekarang dan tanggal hitung mundur
+                             var distance = countDownDate - now;
+     
+                             // Perhitungan waktu untuk hari, jam, menit dan detik
+                             var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                             var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                             var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                             var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+     
+                             // Keluarkan hasil dalam elemen dengan id = "demo"
+                             document.getElementById("demo").innerHTML = days + "h " + hours + "j "
+                                 + minutes + "m " + seconds + "m ";
+     
+                             //Jika hitungan mundur selesai, tulis beberapa teks
+                             if (distance < 0) {
+                                 clearInterval(x);
+                                 document.getElementById("demo").innerHTML = "EXPIRED";
+                             }
+                         }, 1000);
+     
+                     </script>
+                 </div>
+                 <p><strong><span style="color: red;font-family: sans-serif;font-size: 2rem;">Rp.<strike>120.000</strike></span>-Rp.95.000</strong></p>
+                 <p style="padding-bottom: 1.5rem;">
+                     <a id="tombol" href="https://wa.me/+628989392430?text=Hallo%20kak%20%2C%20saya%20mau%20pesan%20Snap%20on%20Smile"><button style="background: rgb(0, 165, 55); font-family: sans-serif;font-size: 2rem; padding: 12px 90px;">
+                    Beli Sekarang</button></a></p>
+                    <p></p>
+             </div>
+             <hr />
+    <img src="SnaponSmile/9f7ba7d0cd07e8095a1a4d8b38a21937.jpeg">
+    </div>
+    <script>
+        function scrollBottom() {
+            let btn = document.getElementById('tombol');
+            btn.scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        }
+    </script>
+</body>
+
+</html>
