@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            padding: 0%;
+            margin: 0%;
+        }
+
+        button {
+            padding: 25px 100px;
+            border: 0;
+            border-radius: 4px;
+            color: #ffffff;
+            line-height: 1;
+            text-align: center;
+            animation-duration: 2.5s;
+            animation-iteration-count: infinite;
+            animation-name: example;
+        }
+        @keyframes example {
+  0%   {opacity: 1; width: 50%;}
+  25%  {opacity: 0.5; width: 53%;}
+  50%  {opacity: 1; width: 50%;}
+  75%  {opacity: 0.5; width: 53%}
+  100% {opacity: 1; width: 50%;}
+}
+    </style>
+    <script>
+        function scrollBottom() {
+            let btn = document.getElementById('tombol');
+            btn.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</head>
+
+<body style="background-color:white;">
+    <img src="selang/selang1.jpg" width="100%" disabled>
+    <div style="text-align: center;">
+        <img src="gelasajaib/arrow.gif" width="20%" disabled>
+    </div>
+    <div style="text-align: center;margin-top: 0rem;margin-bottom: 0rem;">
+        <button id="scroll" onclick="scrollBottom()" style="margin-top: 1rem;margin-bottom: 3rem;">
+            <img src="selang/tombol1.png" width="50%"></button>
+        <img src="selang/selang2.jpg" width="100%" disabled>
+        <img src="selang/selang3.jpg" width="100%" disabled>
+        <img src="gelasajaib/arrow.gif" width="20%" disabled>
+    </div>
+    <div style="text-align: center;">
+        <img src="gelasajaib/images.png" width="35%">
+        <p style="font-family: sans-serif;font-size: 4rem;"><strong>Panjang 20cm &rArr; </strong>Rp.49.000</strong>
+        </p>
+        <p style="font-family: sans-serif;font-size: 4rem;"><strong>Panajng 30cm &rArr; </strong>Rp.59.000</strong>
+        </p>
+    </div>
+    <div style="text-align: center; margin-top: 3rem;margin-bottom: 0rem;">
+        <p style="padding-bottom: 0rem;">
+            <a
+                href="https://wa.me/+628989392430?text=Hallo%20kak%20%2C%20saya%20mau%20ambil%20promo%20ButiranGigi%20apakah%20masih%20tersedia?">
+                <button id="tombol" style="margin-top: 1rem;margin-bottom: 3rem;">
+                    <img src="selang/tombol2.png" width="50%">
+                </button>
+            </a>
+        </p>
+    </div>
+    <img src="selang/selang4.jpeg">
+    </div>
+
+</body>
+
+</html>
