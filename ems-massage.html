@@ -11,6 +11,15 @@
             ttq.page();
         }(window, document, 'ttq');
     </script>
+    <script>
+        function scrollBottom() {
+            let btn = document.getElementById('tombol');
+            btn.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+        
+    </script>
     <style>
         .judul {
             font-size: x-large;
@@ -80,18 +89,27 @@
 </head>
 
 <body style="background-color:white; text-align: center;font-family: sans-serif; margin: 3rem;">
-    <p style="margin: 0px; padding: 0px; font-family: sans-serif; font-size: 50px;"><strong>Pijat Gratis Tanpa Ribet</strong></p>
+    <p style="margin: 0px; padding: 0px; font-family: sans-serif; font-size: 50px;"><strong>Mau Pijat Murah Tanpa Ribet?</strong></p>
         <p style="font-size: 50px; margin-top: 0px;">Kapanpun dan dimanapun</p>
-    <p style="font-size: 65px; color: red;"><strong>PROMO!! BELI 2 GRATIS 1</strong></p>
+    <p style="font-size: 65px; color: red; margin-bottom: 0px;"><strong>PROMO!!</strong></p>
+    <p style="font-size: 65px; color: red; margin-top: 0px;"><strong>Rp <span style="font-size: 80px;">99rb</span> DAPAT 3</strong></p>
     <p style="font-size: 80px; margin-bottom: 0px; margin-top: 1rem;"><strong>EMS Massage</strong></p>
     <img src="ems/g1.jpg" width="80%">
     <br>
     <br>
     <div style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
-    <p style="font-size: 20px;"><strong>Alat Pijat Otomatis</strong></p>
-    <div style="font-size: 17px;">
+    <p style="font-size: 25px;"><strong>Alat Pijat Otomatis</strong></p>
+    <div style="font-size: 20px;">
     <p>Cocok digunakan untuk semua anggota badan</p>
     <p>Nyaman digunakan sambil beraktivitas</p>
+    <br>
+    <p style="font-size: 25px; margin-bottom: 0px;"><strong>8 in 1</strong></p>
+    <p style="font-size: 25px; margin-top: 0px;">Ada 8 mode pijat dalam 1 alat ini</p>
+    <img src="aset/cod.jpg" width="100%">
+     <div style="text-align: center;margin-top: 0rem;margin-bottom: 0rem;">
+        <button id="scroll" onclick="scrollBottom()"
+            style="background: rgb(0, 165, 55); font-family: sans-serif;font-size: 2.4rem; padding: 2rem 130px;margin-top: 1rem;margin-bottom: 3rem;">
+            Pesan Sekarang</button>
     <br>
     <img src="ems/g2.jpg" width="100%">
     <br>
@@ -112,11 +130,11 @@
     <br>
     <br>
     <br>
-    <p>Cocok untuk kalian yang sering</p>
-    <p>mengalami pegal pegal atau nyeri</p>
+    <p><strong>Cocok untuk kalian yang sering</strong></p>
+    <p><strong>mengalami pegal pegal atau nyeri</strong></p>
     <p style="font-size: 16px;"></p>
     <br>
-    <p>Alat ini mampu <span style="font-style: italic; "> melancarkan peredaran darah</span></p>
+    <p>Alat ini mampu <span style="font-style: italic; "> melancarkan peredaran darah dan refleksi otot</span></p>
     <p>sehingga mampu mengatasi segala masalah pada tubuh anda</p>
     <p>termasuk nyeri pada sendi dan otot</p>
     <br>
@@ -130,7 +148,7 @@
     <p>membuat alat ini sangat praktis dan efisien</p>
     <br>
     <br>
-    <h><strong>Spesifikasi Produk</strong></h>
+    <h><strong>SPESIFIKASI</strong></h>
     <div style="text-align: left;">
         <ul>
             <li>
@@ -169,25 +187,24 @@
                     Bayarnya di Rumah</strong></h>
         </div>
         <div style="padding-top: 3rem;">
-            <h style="text-align: center;color: red;font-size: 2.5cm;"><strong>DISKON 53%</strong></h>
+            <h style="text-align: center;color: red;font-size: 2.5cm;" id="tombol"><strong>DISKON 75%</strong></h>
         </div>
         <div style="background-color: blue; margin-left: 27%; margin-right: 27%;">
             <div style="padding: 0.5rem;">
                 <h style="text-align: center;background-color: blue;color: white; padding: 0.5rem;font-size: 1.5cm;">
-                    <strong><strike>Rp 215.000</strike></strong></h>
+                    <strong><strike>Rp 199.000</strike></strong></h>
                 <div style="margin-top: 0.1rem;">
                     <h
                         style="text-align: center;background-color: blue;color: white; padding: 0.5rem;font-size: 1.5cm;padding-top: 0rem;">
-                        <strong>Rp 99.000</strong></strong></h>
+                        <strong>Rp 49.000</strong></strong></h>
                 </div>
             </div>
         </div>
-        <h style="text-align: center;color: red;font-size: 1.7cm;"><strong>Gratis Ongkir</strong></h>
         <br>
         <div style="margin-top: 1rem;padding-left: auto; padding-right: auto;">
             <h style="text-align: center; font-size: 1cm;"><strong>Promo Beli 2 Gratis 1 (dapat3) hanya Rp<span
                 style="color: blue; font-size: larger; font-family: sans-serif;">
-                        138RB</span></strong></h>
+                        99RB</span></strong></h>
         </div>
         <p style="text-align: center; font-size: 1cm;">Bisa <span style="color: red;"><strong>COD</strong></span> ke
             Seluruh Indonesia
@@ -200,11 +217,12 @@
             <img src="enlargescreen/arah.gif" width="20%">
         </div>
         <div style="text-align: center;">
-            <a id="tombol"
+            <a 
                 href="https://wa.me/+628989392430?text=Hallo%20kak%20%2C%20saya%20mau%20beli%20EMS%20Massage%20Alat%20Pijat%20Otomatis%20apakah%20masih%20tersedia?">
                 <img src="enlargescreen/tombol.gif" width="75%">
             </a>
         </div>
+        <img src="aset/garansi.jpg" width="80%">
     </div>
     <div style="text-align: center;margin-top: 1.5rem;margin-bottom: 0.5rem;">
         <img src="gelasajaib/images.png" width="20%">
