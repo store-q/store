@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Komentar dengan Kolom Komentar Publik</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #ffffff;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        text-align: center;
+        color: #333333;
+      }
+      form {
+        margin-top: 20px;
+      }
+      label {
+        font-weight: bold;
+        color: #555555;
+      }
+      input[type="text"],
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      textarea {
+        resize: vertical;
+      }
+      .comment {
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 10px;
+        margin-top: 10px;
+        background-color: #ffffff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Form Komentar dengan Kolom Komentar Publik</h1>
+      <form id="comment-form">
+        <label for="name">Nama:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="comment">Komentar:</label>
+        <textarea id="comment" name="comment" rows="4" required></textarea>
+
+        <button type="submit">Kirim Komentar</button>
+      </form>
+
+      <div class="comments" id="comments">
+        <!-- Komentar-komentar akan muncul di sini -->
+      </div>
+    </div>
+
+    <script>
+      document
+        .getElementById("comment-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const name = document.getElementById("name").value;
+          const comment = document.getElementById("comment").value;
+
+          if (name && comment) {
+            const commentContainer = document.getElementById("comments");
+
+            const commentDiv = document.createElement("div");
+            commentDiv.className = "comment";
+            commentDiv.innerHTML = `
+        <h3>${name}</h3>
+        <p>${comment}</p>
+      `;
+
+            commentContainer.appendChild(commentDiv);
+
+            // Bersihkan input setelah posting komentar
+            document.getElementById("name").value = "";
+            document.getElementById("comment").value = "";
+          }
+        });
+    </script>
+  </body>
+</html>
