@@ -32,6 +32,94 @@
     <![endif]-->
 
 </head>
+<style>
+    @keyframes kiri-kanan {
+      0% {
+        opacity: 0;
+        transform: translate3d(-50px, 0, 0);
+        cursor: pointer;
+        transition: 0.25s all ease-in-out;
+      }
+      100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    @keyframes kanan-kiri {
+      0% {
+        opacity: 0;
+        transform: translate3d(50px, 0, 0);
+        cursor: pointer;
+        transition: 0.25s all ease-in-out;
+      }
+      100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    @keyframes atas-bawah {
+      0% {
+        opacity: 0;
+        transform: translate3d(0, -50px, 0);
+        cursor: pointer;
+        transition: 0.25s all ease-in-out;
+      }
+      100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    @keyframes bawah-atas {
+      0% {
+        opacity: 0;
+        transform: translate3d(0, 50px, 0);
+        cursor: pointer;
+        transition: 0.25s all ease-in-out;
+      }
+      100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    @keyframes fadein {
+      0% {
+        opacity: 0;
+        transform: translate3d(0, 0, 0);
+        cursor: pointer;
+        transition: 0.25s all ease-in-out;
+      }
+      100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    .fadein {
+      animation: fadein 2s ease;
+    }
+
+    .kiri-kanan {
+      animation: kiri-kanan 2s ease;
+    }
+
+    .kanan-kiri {
+      animation: kanan-kiri 2s ease;
+    }
+
+    .atas-bawah {
+      animation: atas-bawah 2s ease;
+    }
+
+    .bawah-atas {
+      animation: bawah-atas 2s ease;
+    }
+
+    
+  </style>
 
 <body id="page-top" class="index">
 	<div id="fb-root"></div>
@@ -80,31 +168,51 @@
 
     <!-- Header -->
     <header>
+        <div style="
+            text-align: center;
+            color: #fff;
+            background-attachment: scroll;
+            background-image: url(../img/background2.png);
+            background-position: center center;
+            background-repeat: none;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            background-size: cover;
+            -o-background-size: cover;
+        ">
         <div class="container">
-            <div class="col-md-7 intro-text">
+            <div class="col-md-7 intro-text"><div class="fadein">
                 <div class="intro-lead-in">Wedding invitation</div>
-                <div class="intro-heading">2 November 2023</div>
+                <div style="text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif;"><p>2 November 2023</p></div></div>
                 <div class="col-sm-12 text-center" >
         					<div class="col-md-5  ikhwan" style="text-align: center;">
+                                <div class="kanan-kiri">
         						<h4>Satrio</h4>
+                            </div>
+                            <div style="fadein">
         						<p>Satrio Romadlonu</p>
-        					</div>
+        					</div></div>
         					<div class="col-md-1">
         						<h1>&</h1>
         					</div>
         					<div class="col-md-5 akhwat" style="text-align: center;">
+                                <div class="kanan-kiri">
         						<h4>Nisa</h4>
+                            </div>
+                            <div style="fadein">
         						<p>Chairun Nisail Fitriyah</p>
+                            </div>
         					</div>
               </div>
 				<div class="col-sm-12">
 					<hr style="width:80%;">
-				</div>
+				</div><div style="fadein">
 				<p class="surat"><b style="font-size: 18px;font-style:normal;">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيْم</b><br>
 				"Dan diantara tanda-tanda kekuasaan-Nya adalah diciptakan-Nya untukmu pasangan hidup dari jenismu sendiri,
 				  supaya kamu mendapat ketenangan hati dan dijadikan-Nya kasih sayang diantra kamu. Sesungguhnya yang demikian
 				  menjadi tanda-tanda kebesaran-Nya bagi orang-orang yang berfikir."<br>
 				  QS. Ar Rum : 21</p>
+                </div>
 				<center>
 					<div class="text-center"
 					style="margin-top: 10px;
@@ -119,11 +227,13 @@
 				</center>
             </div>
         </div>
+    </div>
 		
     </header>
 
     <!-- Services Section -->
     <section id="services">
+        <div style="background-image: url('img/bcg.jpg');">
         <div class="container">
 		<div class="col-sm-12">
             <div class="row text-center">
@@ -154,6 +264,7 @@
                   Kebumen<br><br>
 					</p>
                 </div>
+                <div class="fadein">
                 <div class="col-md-6">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
@@ -206,10 +317,13 @@
             </div>
 			</div>
         </div>
+    </div>
+</div>
     </section>
 
     <!-- Portfolio Grid Section -->
     <section id="portfolio" class="bg-light-gray">
+        <div style="background-image: url('img/bcg.jpg');">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -238,6 +352,7 @@
                 </div>
             </div>
         </div>
+    </div>
     </section>
 
     <!-- About Section -->
@@ -250,8 +365,9 @@
         
         <label for="comment">Pesan:</label><br>
         <textarea id="comment" name="comment" rows="4" cols="50" required></textarea><br><br>
-        
+        <div style="text-align: center;">
         <input type="submit" value="Kirim">
+    </div>
     </form>
     
     <h4 class="portfolio-caption" style="text-align: center;">Pesan</h4>

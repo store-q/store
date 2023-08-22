@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Animasi Dengan Keyframe</title>
+  </head>
+  <style>
+    @keyframes kiri-kanan {
+      0% {
+        opacity: 0;
+        transform: translate3d(-50px, 0, 0);
+        cursor: pointer;
+        transition: 0.25s all ease-in-out;
+      }
+      100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    @keyframes kanan-kiri {
+      0% {
+        opacity: 0;
+        transform: translate3d(50px, 0, 0);
+        cursor: pointer;
+        transition: 0.25s all ease-in-out;
+      }
+      100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    @keyframes atas-bawah {
+      0% {
+        opacity: 0;
+        transform: translate3d(0, -50px, 0);
+        cursor: pointer;
+        transition: 0.25s all ease-in-out;
+      }
+      100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    @keyframes bawah-atas {
+      0% {
+        opacity: 0;
+        transform: translate3d(0, 50px, 0);
+        cursor: pointer;
+        transition: 0.25s all ease-in-out;
+      }
+      100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    .kiri-kanan {
+      animation: kiri-kanan 2s ease;
+    }
+
+    .kanan-kiri {
+      animation: kanan-kiri 2s ease;
+    }
+
+    .atas-bawah {
+      animation: atas-bawah 2s ease;
+    }
+
+    .bawah-atas {
+      animation: bawah-atas 2s ease;
+    }
+  </style>
+
+  <body>
+    <div class="kiri-kanan"><p>Kiri-kanan</p></div>
+    <div class="kanan-kiri"><p>Kanan-kiri</p></div>
+    <div class="atas-bawah"><p>atas-bawah</p></div>
+    <div class="bawah-atas"><p>bawah-atas</p></div>
+  </body>
+</html>
