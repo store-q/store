@@ -1,133 +1,205 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>Tempthooth</title>
     <script>
-        !function (w, d, t) {
-          w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=i,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};var o=document.createElement("script");o.type="text/javascript",o.async=!0,o.src=i+"?sdkid="+e+"&lib="+t;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};
-        
-          ttq.load('CGMGHRBC77UDLADKFQL0');
-          ttq.page();
-        }(window, document, 'ttq');
-        </script>
+      !(function (w, d, t) {
+        w.TiktokAnalyticsObject = t;
+        var ttq = (w[t] = w[t] || []);
+        (ttq.methods = [
+          "page",
+          "track",
+          "identify",
+          "instances",
+          "debug",
+          "on",
+          "off",
+          "once",
+          "ready",
+          "alias",
+          "group",
+          "enableCookie",
+          "disableCookie",
+        ]),
+          (ttq.setAndDefer = function (t, e) {
+            t[e] = function () {
+              t.push([e].concat(Array.prototype.slice.call(arguments, 0)));
+            };
+          });
+        for (var i = 0; i < ttq.methods.length; i++)
+          ttq.setAndDefer(ttq, ttq.methods[i]);
+        (ttq.instance = function (t) {
+          for (var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++)
+            ttq.setAndDefer(e, ttq.methods[n]);
+          return e;
+        }),
+          (ttq.load = function (e, n) {
+            var i = "https://analytics.tiktok.com/i18n/pixel/events.js";
+            (ttq._i = ttq._i || {}),
+              (ttq._i[e] = []),
+              (ttq._i[e]._u = i),
+              (ttq._t = ttq._t || {}),
+              (ttq._t[e] = +new Date()),
+              (ttq._o = ttq._o || {}),
+              (ttq._o[e] = n || {});
+            var o = document.createElement("script");
+            (o.type = "text/javascript"),
+              (o.async = !0),
+              (o.src = i + "?sdkid=" + e + "&lib=" + t);
+            var a = document.getElementsByTagName("script")[0];
+            a.parentNode.insertBefore(o, a);
+          });
+
+        ttq.load("CGMGHRBC77UDLADKFQL0");
+        ttq.page();
+      })(window, document, "ttq");
+    </script>
     <style>
-        #progressbar {
-            text-align: center;
-            outline: none;
-            border: 2px solid black;
-            background-color: rgba(200, 200, 200, 0.5);
-            width: 75%;
-            height: 30px;
-        }
+      #progressbar {
+        text-align: center;
+        outline: none;
+        border: 2px solid black;
+        background-color: rgba(200, 200, 200, 0.5);
+        width: 75%;
+        height: 30px;
+      }
 
-        #timeleft {
-            z-index: 100;
-            background-color: transparent;
-            font-family: 'Verdana';
-        }
+      #timeleft {
+        z-index: 100;
+        background-color: transparent;
+        font-family: "Verdana";
+      }
 
-        #progress {
-            transition: 0.5s;
-            transform: translateY(-19px);
-            background-color: rgba(0, 200, 0, 0.7);
-            height: 100%;
-            width: 0%;
-        }
+      #progress {
+        transition: 0.5s;
+        transform: translateY(-19px);
+        background-color: rgba(0, 200, 0, 0.7);
+        height: 100%;
+        width: 0%;
+      }
 
-        button {
-            padding: 25px 100px;
-            border: 0;
-            border-radius: 4px;
-            color: #ffffff;
-            line-height: 1;
-            text-align: center;
-        }
+      button {
+        padding: 25px 100px;
+        border: 0;
+        border-radius: 4px;
+        color: #ffffff;
+        line-height: 1;
+        text-align: center;
+      }
     </style>
     <script>
-        function scrollBottom() {
-            let btn = document.getElementById('tombol');
-            btn.scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
-        
+      function scrollBottom() {
+        let btn = document.getElementById("tombol");
+        btn.scrollIntoView({
+          behavior: "smooth",
+        });
+      }
     </script>
-</head>
+  </head>
 
-<body style="background-color:white; text-align: center;">
-    <img src="butirangigi/page1.jpg" width="100%">
-    <div style="text-align: center;">
-        <img src="gelasajaib/arrow.gif" width="20%">
+  <body style="background-color: white; text-align: center">
+    <img src="butirangigi/page1.jpg" width="100%" />
+    <div style="text-align: center">
+      <img src="gelasajaib/arrow.gif" width="20%" />
     </div>
-    <div style="text-align: center;margin-top: 0rem;margin-bottom: 0rem;">
-        <button id="scroll" onclick="scrollBottom()"
-            style="background: rgb(0, 165, 55); font-family: sans-serif;font-size: 2.4rem; padding: 2rem 130px;margin-top: 1rem;margin-bottom: 3rem;">
-            Pesan Sekarang</button>
-        <img src="butirangigi/page2.jpg" width="100%">
-        <img src="butirangigi/page3.jpg" width="100%">
-        <img src="butirangigi/page4.jpg" width="100%">
-        
+    <div style="text-align: center; margin-top: 0rem; margin-bottom: 0rem">
+      <button
+        id="scroll"
+        onclick="scrollBottom()"
+        style="
+          background: rgb(0, 165, 55);
+          font-family: sans-serif;
+          font-size: 2.4rem;
+          padding: 2rem 130px;
+          margin-top: 1rem;
+          margin-bottom: 3rem;
+        "
+      >
+        Pesan Sekarang
+      </button>
+      <img src="butirangigi/page2.jpg" width="100%" />
+      <img src="butirangigi/page3.jpg" width="100%" />
+      <img src="butirangigi/page4.jpg" width="100%" />
 
-        <div style="text-align: center;">
-            <img id="tombol" src="butirangigi/pgg.jpg" width="100%">
-        </div>
-       
-        <div style="text-align:center;">
-            <b
-                style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-size: 3rem;color: red;">Promo Segera
-                Berakhir Dalam</b>
-        </div>
-        <h
-            style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-size: 2rem">
-            14 Menit</h>
-        <h id="timeleft" style="font-family: Verdana;font-size: 2rem;">60 Detik Lagi</h>
+      <div style="text-align: center">
+        <img src="aset/bisacod.png" width="100%" />
+        <img id="tombol" src="aset/hanyahariini.gif" width="100%" />
+        <img src="aset/hargagigi.png" width="100%" />
+      </div>
+
+      <div style="text-align: center">
+        <b
+          style="
+            font-family: system-ui, -apple-system, BlinkMacSystemFont,
+              'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+              'Helvetica Neue', sans-serif;
+            font-size: 3rem;
+            color: red;
+          "
+          >Promo Segera Berakhir Dalam</b
+        >
+      </div>
+      <h
+        style="
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+            Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+            sans-serif;
+          font-size: 2rem;
+        "
+      >
+        14 Menit</h
+      >
+      <h id="timeleft" style="font-family: Verdana; font-size: 2rem"
+        >60 Detik Lagi</h
+      >
     </div>
-    <div id="progressbar" style="margin-left: 12.5%;">
-
-        <b id="timeleft" style="color: transparent;">.</b>
-        <div id="progress" style="width: 100%;">
-        </div>
+    <div id="progressbar" style="margin-left: 12.5%">
+      <b id="timeleft" style="color: transparent">.</b>
+      <div id="progress" style="width: 100%"></div>
     </div>
     <script type="text/javascript">
-        let time_left = 60;
-        var progress = document.getElementById("progress");
-        var timeleft = document.getElementById("timeleft");
-        setInterval(function () {
-            time_left = (time_left - 1);
-            timeleft.innerText = parseInt(time_left / 1) + " Detik Lagi";
-            progress.style.width = ((time_left / 60) * 100) + "%";
-            if (time_left <= 0) {
+      let time_left = 60;
+      var progress = document.getElementById("progress");
+      var timeleft = document.getElementById("timeleft");
+      setInterval(function () {
+        time_left = time_left - 1;
+        timeleft.innerText = parseInt(time_left / 1) + " Detik Lagi";
+        progress.style.width = (time_left / 60) * 100 + "%";
+        if (time_left <= 0) {
+          // Do what ever you want to do here!
 
-                // Do what ever you want to do here!
-
-                time_left = 60 * 1;
-                progress.style.width = "100%";
-                timeleft.innerText = "60 Detik Lagi";
-            }
-        }, 1000);
+          time_left = 60 * 1;
+          progress.style.width = "100%";
+          timeleft.innerText = "60 Detik Lagi";
+        }
+      }, 1000);
     </script>
 
     <div class="as-console-wrapper">
-        <div class="as-console"></div>
+      <div class="as-console"></div>
     </div>
-    <div style="text-align: center;">
-        <div style="text-align: center;margin-top: 0.5rem;margin-bottom: 0rem;font-size: larger;">
-            <img src="enlargescreen/arah.gif" width="20%">
-            <img src="enlargescreen/arah.gif" width="20%">
-            <img src="enlargescreen/arah.gif" width="20%">
-    </div>
-    <div style="text-align: center;">
-        <a id="tombol"
-        href="https://wa.me/+628989392430?text=Hallo%20kak%20%2C%20saya%20mau%20beli%20Butiran%20Penambal%20Gigi%20apakah%20masih%20tersedia?">
-            <img src="enlargescreen/tombol.gif" width="75%">
+    <div style="text-align: center">
+      <div
+        style="
+          text-align: center;
+          margin-top: 0.5rem;
+          margin-bottom: 0rem;
+          font-size: larger;
+        "
+      >
+        <img src="enlargescreen/arah.gif" width="20%" />
+        <img src="enlargescreen/arah.gif" width="20%" />
+        <img src="enlargescreen/arah.gif" width="20%" />
+      </div>
+      <div style="text-align: center">
+        <a id="tombol" href="https://wa.wizard.id/d2a81c">
+          <img src="enlargescreen/tombol.gif" width="75%" />
         </a>
+      </div>
     </div>
+    <img src="butirangigi/beforeafter.jpeg" width="70%" />
+    <div style="text-align: center; margin-top: 3rem">
+      <img src="butirangigi/page5.jpg" width="100%" />
     </div>
-    <img src="butirangigi/beforeafter.jpeg" width="70%">
-    <div style="text-align: center;margin-top: 3rem;">
-        <img src="butirangigi/page5.jpg" width="100%">
-    </div>
-</body>
-
+  </body>
 </html>
