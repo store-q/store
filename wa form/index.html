@@ -1,0 +1,155 @@
+<html>
+  <head>
+    <title>Make Order Form To WhatsApp</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+    ></script>
+    <script>
+      $(document).on("click", ".send", function () {
+        /* Form Input */
+        var input_name = $("#name").val(),
+          input_email = $("#email").val(),
+          input_phone = $("#phone").val(),
+          input_product = $("#product").val(),
+          input_payment = $("#payment").val(),
+          input_description = $("#description").val();
+
+        /* Whatsapp Setting */
+        var walink = "https://wa.me/",
+          phone = "6287738539095",
+          text = "Hallo kak, saya mau pesan",
+          text_yes = "Your order was successfully sent.",
+          text_no = "Fill this form to order.";
+
+        /* Smartphone Support */
+        if (
+          /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+            navigator.userAgent
+          )
+        ) {
+          var walink = "https://wa.me/";
+        }
+
+        if (input_name != "" && input_phone != "" && input_product != "") {
+          /* Whatsapp URL */
+          var checkout_whatsapp =
+            walink +
+            "?phone=" +
+            phone +
+            "&text=" +
+            text +
+            "%0A%0A" +
+            "*Nama* : " +
+            input_name +
+            "%0A" +
+            "*Alamat* : " +
+            input_email +
+            "%0A" +
+            "*No. Whatsapp* : " +
+            input_phone +
+            "%0A" +
+            "*Pesanan* : " +
+            input_product +
+            "%0A" +
+            "*Metode Pembayaran* : " +
+            input_payment +
+            "%0A" +
+            "*Pesan Tambahan* : " +
+            input_description +
+            "%0A";
+
+          /* Whatsapp Window Open */
+          window.open(checkout_whatsapp, "_blank");
+          document.getElementById("text-info").innerHTML =
+            '<div class="alert alert-success">' + text_yes + "</div>";
+        } else {
+          document.getElementById("text-info").innerHTML =
+            '<div class="alert alert-danger">' + text_no + "</div>";
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="col-lg-6 col-lg-offset-3">
+        <h4>Pesan via WhatsApp</h4>
+        <div class="panel panel-success">
+          <div class="panel-heading">Checkout To WhatsApp</div>
+          <div class="panel-body">
+            <div class="form-group">
+              <label>Nama</label>
+              <input
+                type="text"
+                name="name"
+                class="form-control"
+                placeholder="Nama"
+                id="name"
+              />
+            </div>
+            <div class="form-group">
+              <label>Alamat Lengkap</label>
+              <input
+                type="email"
+                name="email"
+                class="form-control"
+                placeholder="Rt/Rw, Desa, Kecamatan, Patokan Rumah"
+                id="email"
+              />
+            </div>
+            <div class="form-group">
+              <label>No. WhatsApp</label>
+              <input
+                type="text"
+                name="phone"
+                class="form-control"
+                placeholder="No. WhatsApp"
+                id="phone"
+              />
+            </div>
+            <div class="form-group">
+              <label>Pilih Promo</label>
+              <select name="product" class="form-control" id="product">
+                <option value="">-- Pilih Promo --</option>
+                <option value="79rb dapat 1">79rb dapat 1</option>
+                <option value="99rb dapat 2">99rb dapat 2</option>
+                <option value="129rb dapat 3">129rb dapat 3</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Pilih Metode Pembayaran</label>
+              <select name="payment" class="form-control" id="payment">
+                <option value="">-- Metode Pembayaran --</option>
+                <option value="Bayar dirumah (COD)">Bayar dirumah (COD)</option>
+                <option value="Bank Trasfer BCA">Bank Trasfer BCA</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Pesan Tambahan </label>
+              <textarea
+                name="description"
+                class="form-control"
+                rows="3"
+                id="description"
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <button class="btn btn-success send">Pesan via WhatsApp</button>
+            </div>
+
+            <div id="text-info"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
