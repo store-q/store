@@ -37,7 +37,7 @@
             navigator.userAgent
           )
         ) {
-          var walink = "https://wa.me/";
+          var walink = "https://api.whatsapp.com/send/";
         }
 
         if (input_name != "" && input_phone != "" && input_product != "") {
@@ -82,7 +82,6 @@
   <body>
     <div class="container">
       <div class="col-lg-6 col-lg-offset-3">
-        <h4>Pesan via WhatsApp</h4>
         <div class="panel panel-success">
           <div class="panel-heading">Lengkapi Data Diri Anda</div>
           <div class="panel-body">
@@ -113,7 +112,7 @@
                 type="address"
                 name="address"
                 class="form-control"
-                placeholder="Rt/Rw, Desa, Kecamatan, Patokan Rumah"
+                placeholder="Rt/Rw, Desa, Kecamatan, Kabupaten"
                 id="email"
               />
             </div>

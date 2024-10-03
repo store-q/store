@@ -1,4 +1,16 @@
-<html>
+<!DOCTYPE html>
+<head>
+    <title>PROMO Hari Ini</title>
+</head>
+<body style="text-align: center;">
+    <img src="tooth/1.webp" style="width: 100%;">
+    <img src="tooth/2.webp" style="width: 100%;">
+    <img src="tooth/3.webp" style="width: 100%;">
+    <img src="tooth/4.webp" style="width: 100%;">
+    <img src="tooth/55.webp" style="width: 100%;">
+    <img src="tooth/6.webp" style="width: 100%;">
+    <img src="tooth/arrow.gif">
+    <html></html>
   <head>
     <title>Make Order Form To WhatsApp</title>
     <link
@@ -37,7 +49,7 @@
             navigator.userAgent
           )
         ) {
-          var walink = "https://wa.me/";
+          var walink = "https://api.whatsapp.com/send/";
         }
 
         if (input_name != "" && input_phone != "" && input_product != "") {
@@ -51,9 +63,6 @@
             "%0A%0A" +
             "*Nama* : " +
             input_name +
-            "%0A" +
-            "*No. Whatsapp* : " +
-            input_phone +
             "%0A" +
             "*Alamat* : " +
             input_address +
@@ -80,9 +89,8 @@
     </script>
   </head>
   <body>
-    <div class="container">
+    <div class="container" style="text-align: left;">
       <div class="col-lg-6 col-lg-offset-3">
-        <h4>Pesan via WhatsApp</h4>
         <div class="panel panel-success">
           <div class="panel-heading">Lengkapi Data Diri Anda</div>
           <div class="panel-body">
@@ -95,17 +103,6 @@
                 placeholder="Nama"
                 id="name"
               />
-            </div>
-            <div class="form-group">
-              <label>No. WhatsApp</label>
-              <input
-                type="text"
-                name="phone"
-                class="form-control"
-                placeholder="No. WhatsApp"
-                id="phone"
-              />
-            </div>
 
             <div class="form-group">
               <label>Alamat Lengkap</label>
@@ -113,8 +110,8 @@
                 type="address"
                 name="address"
                 class="form-control"
-                placeholder="Rt/Rw, Desa, Kecamatan, Patokan Rumah"
-                id="email"
+                placeholder="Rt/Rw, Desa, Kecamatan, Kabupaten"
+                id="address"
               />
             </div>
             <div class="form-group">
@@ -158,4 +155,10 @@
       </div>
     </div>
   </body>
+</html>
+    <img src="tooth/7.webp">
+    <img src="tooth/8.webp" style="width: 100%;">
+    <img src="tooth/9.webp" style="width: 100%;">
+    <img src="tooth/10.webp" style="width: 100%;">
+</body>
 </html>
