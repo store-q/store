@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head><!-- TikTok Pixel Code Start -->
   <!-- TikTok Pixel Code Start -->
+   
 <script>
   !function (w, d, t) {
     w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
@@ -23,6 +24,20 @@
     ttq.load('CRVB12BC77U3OBONFD80');
     ttq.page();
   }(window, document, 'ttq');
+  // add this before event code to all pages where PII data postback is expected and appropriate 
+ttq.identify({
+	"email": "<hashed_email_address>", // string. The email of the customer if available. It must be hashed with SHA-256 on the client side.
+	"phone_number": "<hashed_phone_number>", // string. The phone number of the customer if available. It must be hashed with SHA-256 on the client side.
+	"external_id": "<hashed_extenal_id>" // string. Any unique identifier, such as loyalty membership IDs, user IDs, and external cookie IDs.It must be hashed with SHA-256 on the client side.
+});
+
+ttq.track('AddToCart', {
+	"contents": [
+		{
+			"content_id": "<addtocart>" // string. ID of the product. Example: "1077218".
+		}
+	]
+});
   </script>
   <!-- TikTok Pixel Code End -->
     <title>PROMO Hari Ini</title>
