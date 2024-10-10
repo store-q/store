@@ -1,9 +1,44 @@
-<div style="text-align: center">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animated Arrows</title>
+  <style>
+    .arrow {
+      width: 10%; /* Sesuaikan ukuran panah */
+      animation: bounce 0.5s infinite alternate;
+      margin: 0 20px; /* Jarak antar panah */
+    }
+
+    @keyframes bounce {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(
+          -20px
+        ); /* Ubah nilai ini untuk mengubah jarak gerak panah */
+      }
+    }
+
+    .container {
+      display: flex; /* Menggunakan Flexbox untuk menyusun panah dalam satu baris */
+      justify-content: center; /* Menyusun panah di tengah */
+      margin-top: 50px; /* Jarak dari atas */
+    }
+  </style>
+</head>
+<div style="text-align: center; background-color: black">
   <img src="hipnotis/trik rahasia (2).gif" width="100%" />
   <img src="hipnotis/100 MENANG.jpg" width="100%" />
-  <img src="tooth/arrow.gif" />
+
+  <div class="container">
+    <img class="arrow" src="hipnotis/pngegg (1).png" alt="Arrow 1" />
+    <img class="arrow" src="hipnotis/pngegg (1).png" alt="Arrow 2" />
+    <img class="arrow" src="hipnotis/pngegg (1).png" alt="Arrow 3" />
+  </div>
+
   <a href="https://wa.wizard.id/594277">
-    <img src="tooth/pesan di sini.gif" width="80%"
+    <img src="hipnotis/daptakn.gif" width="80%"
   /></a>
   <div style="text-align: center">
     <img src="tooth/7.webp" />
