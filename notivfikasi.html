@@ -1,0 +1,204 @@
+<div style="font-family: Arial, sans-serif; background: #fff"></div>
+<div
+  style="
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  "
+>
+  KAMU MENCARI SOLUSI UNTUK GIGI<br />OMPONG DAN BERLUBANG?
+</div>
+
+<div
+  style="
+    background-color: #3bb5f1;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  "
+>
+  <div style="display: flex; align-items: center">
+    <div
+      style="
+        width: 40px;
+        height: 40px;
+        background: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #3bb5f1;
+        font-size: 24px;
+        margin-right: 10px;
+      "
+    >
+      🦷
+    </div>
+    <div>
+      <div style="font-size: 24px; font-weight: bold">TEMPTOOTH</div>
+      <div style="font-size: 14px">Butiran Penambal Gigi</div>
+    </div>
+  </div>
+  <div
+    style="
+      position: absolute;
+      right: 0;
+      top: 0;
+      background: #ff4c4c;
+      color: white;
+      font-weight: bold;
+      padding: 8px 12px;
+      border-bottom-left-radius: 12px;
+      font-size: 14px;
+    "
+  >
+    50% OFF
+  </div>
+</div>
+<div
+  style="
+    display: inline-block;
+    border: 2px solid #e0e0e0;
+    padding: 30px 50px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #fff;
+  "
+>
+  <div
+    style="
+      position: absolute;
+      left: -40px;
+      top: -40px;
+      width: 80px;
+      height: 80px;
+      background-color: red;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      font-weight: bold;
+    "
+  >
+    Diskon<br />50%
+  </div>
+
+  <div
+    style="color: red; font-size: 32px; font-weight: bold; margin-bottom: 20px"
+  >
+    PROMO!!
+  </div>
+  <div style="font-size: 22px; margin-bottom: 10px">100 Butir</div>
+  <div style="font-size: 24px; margin-bottom: 10px">
+    <span style="color: red; text-decoration: line-through; margin-right: 10px"
+      >Rp 99.000</span
+    >
+    <span style="color: black">Rp 49.000</span>
+  </div>
+  <div style="font-size: 18px; color: black">
+    Bisa <span style="color: red; font-weight: bold">COD</span> ke Seluruh
+    Indonesia
+  </div>
+</div>
+<div
+  style="
+    background: #fff0f0;
+    padding: 20px 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    font-family: 'Segoe UI', sans-serif;
+    max-width: 350px;
+    margin: auto;
+  "
+>
+  <!-- Judul -->
+  <div
+    style="
+      font-size: 20px;
+      font-weight: bold;
+      color: #d32f2f;
+      margin-bottom: 8px;
+    "
+  >
+    Promo akan berakhir dalam
+  </div>
+
+  <!-- Countdown -->
+  <div
+    id="countdown"
+    style="
+      font-size: 20px;
+      font-weight: bold;
+      color: #000000;
+      margin-bottom: 10px;
+    "
+  >
+    15 menit 0 detik lagi
+  </div>
+
+  <!-- Progress Bar Container -->
+  <div
+    style="
+      background: #e0f2f1;
+      height: 8px;
+      border-radius: 4px;
+      overflow: hidden;
+      position: relative;
+    "
+  >
+    <div
+      id="progress-bar"
+      style="
+        background: #388e3c;
+        height: 100%;
+        width: 100%;
+        transition: width 1s linear;
+      "
+    ></div>
+  </div>
+</div>
+
+<script>
+  const countdownEl = document.getElementById("countdown");
+  const progressBar = document.getElementById("progress-bar");
+
+  let totalCountdown = 15 * 60; // 15 menit dalam detik
+  let progressTime = 60; // durasi 1 menit
+  let progressElapsed = 0;
+
+  function updateCountdown() {
+    const minutes = Math.floor(totalCountdown / 60);
+    const seconds = totalCountdown % 60;
+    countdownEl.textContent = `${minutes} menit ${seconds} detik lagi`;
+
+    if (totalCountdown > 0) {
+      totalCountdown--;
+    } else {
+      totalCountdown = 15 * 60; // reset ketika habis
+    }
+  }
+
+  function updateProgressBar() {
+    progressElapsed = (progressElapsed + 1) % progressTime;
+    const progressPercent = 100 - (progressElapsed / progressTime) * 100;
+    progressBar.style.width = `${progressPercent}%`;
+  }
+
+  // Mulai countdown dan progress
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+  setInterval(updateProgressBar, 1000);
+</script>

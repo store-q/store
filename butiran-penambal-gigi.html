@@ -364,76 +364,205 @@ src="https://www.facebook.com/tr?id=704744722067914&ev=PageView&noscript=1"
   </style>
 </head>
 <body style="text-align: center;">
+  
+  
+    
+  
+    
+  
+    
+  
+  
     <img src="tooth/1.webp" style="width: 100%;">
     <img src="tooth/2.webp" style="width: 100%;">
     <img src="tooth/3.webp" style="width: 100%;">
     <img src="tooth/4.webp" style="width: 70%;">
-    <img src="tooth/55.webp" style="width: 100%;">
-  <div style="text-align: center; margin-top: 0rem; margin-bottom: 0rem"></div>
-      <div style="text-align: center">
-        <img src="butirangigi/pgg.jpg" width="100%" />
+    <div style="background-color: #33b5ff; padding: 15px 0; text-align: center;">
+      <span style="font-size: 24px; font-weight: bold; color: white;">
+        Harga Spesial Untuk Anda
+      </span>
+    </div>
+    
+    <div style="text-align: center;">
+    <div style="border: 2px solid #e0e0e0; padding: 30px 50px; border-radius: 12px; box-shadow: 0 0 15px rgba(0,0,0,0.1); position: relative; font-family: Arial, sans-serif; text-align: center; background: #fff;">
+      <div style="position: absolute; top: -40px; width: 160px; height: 160px; background-color: red; color: white; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 30px; font-weight: bold;">
+        Diskon<br>50%
       </div>
-
-      <div style="text-align: center">
-        <b
-          style="
-            font-family: system-ui, -apple-system, BlinkMacSystemFont,
-              'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
-              'Helvetica Neue', sans-serif;
-            font-size: 3rem;
-            color: red;
-          "
-          >Promo Segera Berakhir Dalam</b
-        >
+    
+      <div style="color: red; font-size: 32px; font-weight: bold; margin-bottom: 20px;">PROMO!!</div>
+      <div style="font-size: 22px; margin-bottom: 10px;">100 Butir</div>
+      <div style="font-size: 24px; margin-bottom: 10px;">
+        <span style="color: red; text-decoration: line-through; margin-right: 10px;">Rp 99.000</span>
+        <span style="color: black;">Rp 49.000</span>
       </div>
-      <h
-        style="
-          font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
-            Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
-            sans-serif;
-          font-size: 2rem;
-        "
-      >
-        14 Menit</h
-      >
-      <h id="timeleft" style="font-family: Verdana; font-size: 2rem"
-        >60 Detik Lagi</h
-      >
+      <div style="font-size: 18px; color: black;">Bisa <span style="color: red; font-weight: bold;">COD</span> ke Seluruh Indonesia</div>
     </div>
-    <div id="progressbar" style="margin-left: 12.5%">
-      <b id="timeleft" style="color: transparent">.</b>
-      <div id="progress" style="width: 100%"></div>
-    </div>
-    <script type="text/javascript">
-      let time_left = 60;
-      var progress = document.getElementById("progress");
-      var timeleft = document.getElementById("timeleft");
-      setInterval(function () {
-        time_left = time_left - 1;
-        timeleft.innerText = parseInt(time_left / 1) + " Detik Lagi";
-        progress.style.width = (time_left / 60) * 100 + "%";
-        if (time_left <= 0) {
-          // Do what ever you want to do here!
+  </div>
+    
+    <!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    .notification {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #000;
+      color: #fff;
+      padding: 14px 18px;
+      border-radius: 12px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.6);
+      min-width: 320px;
+      opacity: 0;
+      transform: translateX(100%);
+      transition: all 0.6s ease;
+      z-index: 9999;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .notification.show {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .notification.hide {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    .highlight {
+      color: #00ffe7;
+      font-weight: 600;
+    }
+    .timestamp {
+      font-size: 0.8em;
+      color: #aaa;
+      margin-top: 6px;
+    }
+  </style>
+</head>
+<div style="background:#fff0f0;padding:20px 30px;border-radius:12px;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,0.08);font-family:'Segoe UI',sans-serif;margin:auto;">
+  <!-- Judul -->
+  <div style="font-size:16px;font-weight:bold;color:#d32f2f;margin-bottom:8px;">
+    Promo akan berakhir dalam
+  </div>
 
-          time_left = 60 * 1;
-          progress.style.width = "100%";
-          timeleft.innerText = "60 Detik Lagi";
-        }
-      }, 1000);
-    </script>
+  <!-- Countdown -->
+  <div id="countdown" style="font-size:10px;color:#000000;margin-bottom:10px;">
+    15 menit 0 detik lagi
+  </div>
 
-    <div class="as-console-wrapper">
-      <div class="as-console"></div>
-    </div>
-    <div style="text-align: center">
-      <div
-        style="
-          text-align: center;
-          margin-top: 0.5rem;
-          margin-bottom: 0rem;
-          font-size: larger;
-        "
-      >
+  <!-- Progress Bar Container -->
+  <div style="background:#e0f2f1;height:20px;border-radius:4px;overflow:hidden;position:relative;">
+    <div id="progress-bar" style="background:#388e3c;height:100%;width:100%;transition:width 1s linear;"></div>
+  </div>
+</div>
+
+<script>
+  const countdownEl = document.getElementById("countdown");
+  const progressBar = document.getElementById("progress-bar");
+
+  let totalCountdown = 15 * 60; // 15 menit dalam detik
+  let progressTime = 60; // durasi 1 menit
+  let progressElapsed = 0;
+
+  function updateCountdown() {
+    const minutes = Math.floor(totalCountdown / 60);
+    const seconds = totalCountdown % 60;
+    countdownEl.textContent = `${minutes} menit ${seconds} detik lagi`;
+
+    if (totalCountdown > 0) {
+      totalCountdown--;
+    } else {
+      totalCountdown = 15 * 60; // reset ketika habis
+    }
+  }
+
+  function updateProgressBar() {
+    progressElapsed = (progressElapsed + 1) % progressTime;
+    const progressPercent = 100 - ((progressElapsed / progressTime) * 100);
+    progressBar.style.width = `${progressPercent}%`;
+  }
+
+  // Mulai countdown dan progress
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+  setInterval(updateProgressBar, 1000);
+</script>
+
+<body class="body">
+
+<div class="notification" id="notifBox"></div>
+
+<script>
+  const names = [
+    "Siti", "Sri", "Tati", "Wati", "Suminah", "Lastri", "Jumiyem", "Minah",
+    "Slamet", "Darto", "Sutrisno", "Parjo", "Wagiman", "Suroso", "Bambang", "Joko",
+    "Karni", "Sarwono", "Turinah", "Ponidi", "Wagini", "Mulyadi", "Sunarti", "Rohim"
+  ];
+
+  const locations = [
+    "Gondokusuman, Yogyakarta, DI Yogyakarta",
+    "Taman, Sidoarjo, Jawa Timur",
+    "Cimanggis, Depok, Jawa Barat",
+    "Andir, Bandung, Jawa Barat",
+    "Medan Timur, Medan, Sumatera Utara",
+    "Panakkukang, Makassar, Sulawesi Selatan",
+    "Lowokwaru, Malang, Jawa Timur",
+    "Cipayung, Jakarta Timur, DKI Jakarta",
+    "Krian, Sidoarjo, Jawa Timur",
+    "Banjarsari, Surakarta, Jawa Tengah",
+    "Blimbing, Malang, Jawa Timur",
+    "Gadingrejo, Pasuruan, Jawa Timur",
+    "Sukasari, Bandung, Jawa Barat",
+    "Kartoharjo, Madiun, Jawa Timur",
+    "Sumbersari, Jember, Jawa Timur"
+  ];
+
+  const durations = [5000, 4000, 5000, 5000, 3000, 5000, 5000, 5000, 4000, 5000];
+  let index = 0;
+  const notifBox = document.getElementById("notifBox");
+
+  function getRandom(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
+  }
+
+  function getTimestamp() {
+    return new Date().toLocaleString("id-ID", {
+      hour: "2-digit",
+      minute: "2-digit",
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    });
+  }
+
+  function showNotif() {
+    const name = getRandom(names);
+    const location = getRandom(locations);
+    const duration = durations[index % durations.length];
+
+    notifBox.innerHTML = `
+      <span class="highlight">${name}</span> dari <span class="highlight">${location}</span><br>
+      telah membeli <strong>Penambal Gigi</strong> seharga <strong>Rp 49.000</strong><br>
+      <div class="timestamp">🕒 ${getTimestamp()}</div>
+    `;
+
+    notifBox.classList.remove("hide");
+    notifBox.classList.add("show");
+
+    setTimeout(() => {
+      notifBox.classList.remove("show");
+      notifBox.classList.add("hide");
+      setTimeout(showNotif, 3000);
+    }, duration);
+
+    index++;
+  }
+
+  setTimeout(showNotif, 2000);
+</script>
+
+</body>
+</html>
         <img src="enlargescreen/arah.gif" width="20%" />
         <img src="enlargescreen/arah.gif" width="20%" />
         <img src="enlargescreen/arah.gif" width="20%" />
@@ -466,5 +595,6 @@ src="https://www.facebook.com/tr?id=704744722067914&ev=PageView&noscript=1"
         width="20%"
       />
     </div>
+    
     </body>
 </html>
