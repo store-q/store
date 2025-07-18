@@ -89,6 +89,7 @@
       transition: all 0.6s ease;
       z-index: 9999;
       font-family: 'Segoe UI', sans-serif;
+      font-size: 20px;
     }
     .notification.show {
       opacity: 1;
@@ -100,8 +101,7 @@
     }
     .highlight {
       color: #00ffe7;
-      font-weight: 600;
-      font-size: 20px;
+      
     }
     .timestamp {
       font-size: 0.8em;
@@ -212,7 +212,7 @@
     const duration = durations[index % durations.length];
 
     notifBox.innerHTML = `
-      <span class="highlight">${name}</span> dari <span class="highlight">${location}</span><br>
+      <span class="highlight">${name}</span> dari <span>${location}</span><br>
       telah membeli <strong>Penambal Gigi</strong> seharga <strong>Rp 49.000</strong><br>
       <div class="timestamp">🕒 ${getTimestamp()}</div>
     `;
